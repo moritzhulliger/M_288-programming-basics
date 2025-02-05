@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankomat App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bankomat App</h2>
+        <div id="balance" class="message">Kontostand: 0</div>
+
+        <button onclick="showBalance()">Guthaben anzeigen</button>
+        <button onclick="depositMoney()">Geld einzahlen</button>
+        <button onclick="withdrawMoney()">Geld abheben</button>
+
+        <input type="number" id="amountInput" placeholder="Enter amount" />
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        let balance = 0;  // Initial balance
+
+        const validDenominations = [10, 20, 50, 100, 200];
+
+        function showBalance() {
+            document.getElementById('balance').textContent = `Balance: ${balance} CHF`;
+            document.getElementById('message').textContent = "";
+        }
+
+        function depositMoney() {
+            const amount = parseInt(document.getElementById('amountInput').value);
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById('message').textContent = "Please enter a valid deposit amount.";
+                return;
+            }
+            balance += amount;
+            document.getElementById('message').textContent = `${amount}€ deposited successfully!`;
+            showBalance();
+        }
+
+        function withdrawMoney() {
+            const amount = parseInt(document.getElementById('amountInput').value);
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById('message').textContent = "Please enter a valid withdrawal amount.";
+                return;
+            }
+
+            if (amount > balance) {
+                document.getElementById('message').textContent = "Insufficient balance!";
+                return;
+            }
+
+            if (amount >= 30 && amount % 10 === 0 || amount === 20) {
+                document.getElementById('message').textContent = "Betrag nicht möglich, vorhandene Noten (20, 50, 100, 200).";
+                return;
+            }
+
+            balance -= amount;
+            document.getElementById('message').textContent = `${amount}€ withdrawn successfully!`;
+            showBalance();
+        }
+    </script>
+</body>
+</html>
