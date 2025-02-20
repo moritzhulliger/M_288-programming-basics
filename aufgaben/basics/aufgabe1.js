@@ -3,4 +3,4 @@
     Das Programm startet ihr mit dem Befehl "node aufgabe1.js" 
 **/ 
 
-console.log("aufgabe 1")
+console.log("lalaland!")
