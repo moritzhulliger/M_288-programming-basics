@@ -4,4 +4,16 @@
  * Schreibt den Javascript Code hier, bindet dann dieses File ins HTML ein (src attribute).
  */
 
-alert("HELLO VELO")
+let inputVomKunden = "Hall";
+
+console.log(inputVomKunden);
+
+inputVomKunden = "Paris";
+
+console.log(inputVomKunden);
+
+
+if(inputVomKunden === "Hallo") {
+    alert("Velo")
+}
+
