@@ -1,9 +1,9 @@
-let array = ['Hallo', 'Velo'];
+let fahrzeuge = ['Auto', 'Velo', 'Flugzeug', 'Schiff'];
 
-console.log(`Array ${array}`);
+console.log('Array ' + fahrzeuge);
 
-console.log(`Array erstes Element ${array[0]}`)
+console.log(`Array erstes Element ${fahrzeuge[0]}`)
 
-console.log(`Array zweites Element ${array[1]}`)
+console.log(`Array drittes Element ${fahrzeuge[2]}`)
 
-console.log(`Array nicht vorhandenes Element ${array[6]}`)
+console.log(`Array nicht vorhandenes Element ${fahrzeuge[6]}`)
