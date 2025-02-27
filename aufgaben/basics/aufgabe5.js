@@ -6,3 +6,6 @@
  * Tipps: https://www.w3schools.com/jsref/event_onclick.asp
  */
 
+function sayHello() {
+    alert("Das ist ein alert");
+}
