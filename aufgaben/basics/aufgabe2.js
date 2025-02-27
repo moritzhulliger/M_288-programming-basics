@@ -23,7 +23,7 @@ console.log("Ein Jahr vergeht .... die Zeit läuft ...")
 
 age = age + 1;
 
-console.log("Du bist jetzt " + age + " Jahre alt")
+console.log("Du bist jetzt " + age + " Jahre alt ")
 
 
 
