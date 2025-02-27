@@ -1,1 +1,1 @@
-console.log("hallo :)")
+"use strict";
