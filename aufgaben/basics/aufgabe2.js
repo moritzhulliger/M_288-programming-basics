@@ -19,3 +19,4 @@ console.log("ein jahr vergeht ..... die zeit läuft")
 age = age + 1;
 
 console.log("du bist jetzt" + age + " Jahre alt")
+
