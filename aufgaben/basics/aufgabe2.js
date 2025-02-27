@@ -1,8 +1,13 @@
 /*** 
     Schreibe ein Programm, welches Hallo DeinName, in die console schreibt.
     Erstellt dazu einen Variable `helloString` und einen String `yourName` und kombiniert diese.
-**/ 
-let helloString = "Hallo"
+
+    https://www.w3schools.com/js/js_strings.asp
+    https://www.w3schools.com/js/js_numbers.asp
+**/
+"use strict";
+
+
 
 let yourName ="Ben46"
 
