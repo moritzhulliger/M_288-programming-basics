@@ -6,7 +6,11 @@ function rollDice(sides = 20) {
   // Function to wake up in the morning
   function wakeUp() {
     const wakeUpRoll = rollDice(6);
-    return wakeUpRoll === 6 ? "Leaped out of bed heroically!" : "Hit snooze... again.";
+    if(wakeUpRoll === 6) {
+        console.log("Leaped out of bed heroically!");
+    } else {
+        console.log("Hit snooze... again.");
+    }
   }
   
   // Function to prepare breakfast
@@ -21,6 +25,12 @@ function rollDice(sides = 20) {
     const reps = rollDice(10);
     return `Did ${reps} epic push-ups while epic music played in the background!`;
   }
+
+  function sayHello(name, name2, name3) {
+    console.log("Hallo: " + name)
+    console.log("Hallo: " + name2)
+    console.log("Hallo: " + name3)
+  }
   
   // Function to fight a monster
   function fightMonster() {
@@ -33,9 +43,13 @@ function rollDice(sides = 20) {
   // Adventurer's daily log
   function adventurerDailyLog() {
     console.log("🌞 Adventurer's Daily Routine 🌞");
-    console.log(wakeUp());
-    console.log(prepareBreakfast());
+    wakeUp();
+
+    const breakfastString = prepareBreakfast();
+    console.log(breakfastString);
+
     console.log(workout());
+    console.log(sayHello('Moritz', 'Mike', 'Peter'));
     console.log(fightMonster());
     console.log("🏆 End of Day - Another legend written!");
   }
