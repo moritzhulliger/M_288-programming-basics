@@ -10,3 +10,17 @@ this.canvas = document.getElementById('myCanvas');
 if (!this.canvas) throw new Error("Canvas not found");
 
 const ctx = this.canvas.getContext('2d');
+
+ctx.moveTo(0, 0);
+ctx.lineTo(400, 200);
+ctx.stroke();
+
+drawSun(200, 50, '#FFDF22', 40);
+drawSun(500, 300, '#red', 80);
+
+function drawSun(positionX, positionY, color, size) {
+    ctx.beginPath();
+    ctx.arc(positionX, positionY, size, 0, 2 * Math.PI);
+    ctx.fillStyle = color; 
+    ctx.fill();
+}
