@@ -1,6 +1,4 @@
 # M_288-programming-basics
 
-## Arbeitsweise mit GIT
-Erstellt euch einen Branch auf dem Projekt der folgenden Namen hat: \<vorname>-\<nachname> 
+Damit ihr Javascript Programme im Terminal nutzen könnt müsst ihr nodejs auf eurem Rechner installieren: https://nodejs.org/en/download/
 
-Auf diesem Branch implementiert ihr eure Lösungen und pusht sie auf das repository.

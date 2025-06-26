@@ -27,7 +27,10 @@ Du sollst ein kleines Inventar-System für einen Abenteurer programmieren.
 ## Bonus (optional)
 - Füge eine Funktion hinzu, um ein Item aus dem Rucksack zu entfernen.
 - Mache die Items statt als `Array` als `Object`, und gib ihnen einen unterschiedlichen Preis.
-- Erstelle ein HTML GUI dazu, wobei jedes Objekt im 
+
+## Teil 2
+
+Erstelle 
 
 Viel Erfolg! :)
 
